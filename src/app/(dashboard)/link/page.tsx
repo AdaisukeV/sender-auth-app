@@ -25,7 +25,7 @@ export default function LinkBranding() {
   };
 
   const isDomainEmpty = (domain: string): boolean => {
-    return domain === ``;
+    return domain === '';
   };
 
   const handleSubdomainChange = (e: React.ChangeEvent<HTMLInputElement>) => {

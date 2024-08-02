@@ -27,7 +27,7 @@ export default function DomainAuthentication() {
   };
 
   const isDomainEmpty = (domain: string): boolean => {
-    return domain === ``;
+    return domain === '';
   };
 
   return (
