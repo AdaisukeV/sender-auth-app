@@ -14,7 +14,8 @@ import {
   Chip,
   ChipProps,
   Snippet,
-  Checkbox
+  Checkbox,
+  ScrollShadow
 } from '@nextui-org/react';
 
 type DNSRecord = {
@@ -116,7 +117,13 @@ export default function VerifyDomain() {
                 <TableCell>{renderChip(verified, record.valid)}</TableCell>
                 <TableCell>{record.type}</TableCell>
                 <TableCell><Snippet hideSymbol>{record.host}</Snippet></TableCell>
-                <TableCell><Snippet hideSymbol>{record.data}</Snippet></TableCell>
+                <TableCell>
+                  <Snippet hideSymbol>
+                    <ScrollShadow size={40} hideScrollBar orientation="horizontal" className='max-w-[700px]'>
+                      {record.data}
+                    </ScrollShadow>
+                  </Snippet>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
